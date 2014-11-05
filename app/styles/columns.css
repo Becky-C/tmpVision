@@ -1,0 +1,8 @@
+#wrapper {width:1000px; margin:auto;}
+#content {width:50%; height:400px; float:left;}
+#leftbar {width:20%; float:left;}
+#rightbar {width:20%; float:right;}
+
+ table, th, td {
+     border: 1px solid black;
+ }

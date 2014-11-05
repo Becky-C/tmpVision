@@ -1,0 +1,149 @@
+<div id="wrapper">
+    <div id="leftbar">
+        <abn-tree tree-data=my_data on-select="objective_tree_handler(branch)" expand-level="1"></abn-tree>
+
+    </div>
+    <div id="content">
+        <div id="info" class="objInfo">
+        <center>
+            <h3>{{currentSelection.name}}</h3>
+            <i>{{currentSelection.desc}}</i>
+        </center>
+        </div>
+
+        <p>
+        <div id="associateCanvas">
+        <div class="img" ng-repeat="associate in currentSelection.associates">
+
+                <div class="card">
+                    <!--<div class="table-responsive">
+                        <table class="table table-bordered">
+                    <tr>
+
+                    <p><b>{{associate.name}}</b></p>
+
+                    </tr>
+
+                    <tbody>
+                    <tr>
+                        <td>
+                    <div class="info">
+                        <span class="title">Manager:</span>
+                        <span class="value">{{associate.manager}}</span>
+                    </div>
+
+                    <div class="info">
+                        <span class="title">Department:</span>
+                        <span class="value">{{associate.dept}}</span>
+                    </div>
+                        </td>
+                    <td>
+                    <div class="info">
+                        <span class="title">Assigned:</span>
+                        <span class="value">{{associate.currLoad}}</span>
+                    </div>
+                    </td>
+                    </tr>
+                    </tbody>
+                        </table>
+                </div>-->
+                    {{associate.name}}
+                    <div class="info">
+                        <span class="title">Manager:</span>
+                        <span class="value">{{associate.manager}}</span>
+                    </div>
+
+                    <div class="info">
+                        <span class="title">Department:</span>
+                        <span class="value">{{associate.dept}}</span>
+                    </div>
+                    <div class="info">
+                        <span class="title">Assigned:</span>
+                        <span class="value">{{associate.currLoad}}</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <br><br>
+        <div id="stagingCanvas">
+            <div class="img" ng-repeat="associate in stagedAssociates">
+
+                <div class="card">
+                    <!--<div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr>
+
+                                <p><b>{{associate.name}}</b></p>
+
+                            </tr>
+
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="info">
+                                        <span class="title">Manager:</span>
+                                        <span class="value">{{associate.manager}}</span>
+                                    </div>
+
+                                    <div class="info">
+                                        <span class="title">Department:</span>
+                                        <span class="value">{{associate.dept}}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="info">
+                                        <span class="title">Assigned:</span>
+                                        <span class="value">{{associate.currLoad}}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>-->
+                    {{associate.name}}
+                    <div class="info">
+                        <span class="title">Manager:</span>
+                        <span class="value">{{associate.manager}}</span>
+                    </div>
+
+                    <div class="info">
+                        <span class="title">Department:</span>
+                        <span class="value">{{associate.dept}}</span>
+                    </div>
+                    <div class="info">
+                        <span class="title">Assigned:</span>
+                        <span class="value">{{associate.currLoad}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rightbar">
+        <select ng-model="assocSort" ng-change="selectSort(assocSort)">
+            <option value="Name">Name</option>
+            <option value="Department">Department</option>
+        </select>
+        <button ng-click="addAssociate()" ng-init="count=0">Add</button>
+        <input type="text" ng-model="search" ng-change="filterSort(search)"/>
+        <abn-tree tree-data=associate_data on-select="associate_tree_handler(branch)" expand-level="1"></abn-tree>
+
+        <hr />
+
+       <!-- <div class="card" style="display:{{cardHidden}}">
+            <h1>{{currentAssociateSelection.name}}</h1>
+            <div class="info">
+                <span class="title">Manager:</span>
+                <span class="value">{{currentAssociateSelection.manager}}</span>
+            </div>
+            <div class="info">
+                <span class="title">Department:</span>
+                <span class="value">{{currentAssociateSelection.dept}}</span>
+            </div>
+            <div class="info">
+                <span class="title">Assigned:</span>
+                <span class="value">{{currentAssociateSelection.currLoad}}</span>
+            </div>
+        </div>-->
+    </div>
+
+</div>
