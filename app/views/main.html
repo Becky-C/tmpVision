@@ -1,5 +1,6 @@
 <div id="wrapper">
     <div id="leftbar">
+        Objectives:
         <abn-tree tree-data=my_data on-select="objective_tree_handler(branch)" expand-level="1"></abn-tree>
 
     </div>
@@ -15,38 +16,7 @@
         <div id="associateCanvas">
         <div class="img" ng-repeat="associate in currentSelection.associates">
 
-                <div class="card">
-                    <!--<div class="table-responsive">
-                        <table class="table table-bordered">
-                    <tr>
-
-                    <p><b>{{associate.name}}</b></p>
-
-                    </tr>
-
-                    <tbody>
-                    <tr>
-                        <td>
-                    <div class="info">
-                        <span class="title">Manager:</span>
-                        <span class="value">{{associate.manager}}</span>
-                    </div>
-
-                    <div class="info">
-                        <span class="title">Department:</span>
-                        <span class="value">{{associate.dept}}</span>
-                    </div>
-                        </td>
-                    <td>
-                    <div class="info">
-                        <span class="title">Assigned:</span>
-                        <span class="value">{{associate.currLoad}}</span>
-                    </div>
-                    </td>
-                    </tr>
-                    </tbody>
-                        </table>
-                </div>-->
+                <div ng-class="chooseCardClass(associate.currLoad)">
                     {{associate.name}}
                     <div class="info">
                         <span class="title">Manager:</span>
@@ -67,39 +37,7 @@
         <br><br>
         <div id="stagingCanvas">
             <div class="img" ng-repeat="associate in stagedAssociates">
-
-                <div class="card">
-                    <!--<div class="table-responsive">
-                        <table class="table table-bordered">
-                            <tr>
-
-                                <p><b>{{associate.name}}</b></p>
-
-                            </tr>
-
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <div class="info">
-                                        <span class="title">Manager:</span>
-                                        <span class="value">{{associate.manager}}</span>
-                                    </div>
-
-                                    <div class="info">
-                                        <span class="title">Department:</span>
-                                        <span class="value">{{associate.dept}}</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="info">
-                                        <span class="title">Assigned:</span>
-                                        <span class="value">{{associate.currLoad}}</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>-->
+                <div ng-class="chooseCardClass(associate.currLoad)">
                     {{associate.name}}
                     <div class="info">
                         <span class="title">Manager:</span>

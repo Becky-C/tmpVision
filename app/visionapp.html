@@ -2,21 +2,26 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vision Community: Resource Allocation Tool</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="styles/abn_tree.css"/>
-    <link rel="stylesheet" href="styles/card.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/columns.css">
+    <!-- <link rel="stylesheet" href="styles/bootstrap.css"> -->
+    <link rel="stylesheet" href="styles/canvas.css">
+    <link rel="stylesheet" href="styles/abn_tree.css"/>
+    <link rel="stylesheet" href="styles/card.css"/>
+    <link rel="stylesheet" href="styles/animations.css"/>
     <!-- endbuild -->
+
 
 </head>
 <body ng-app="angularWebApp">
@@ -26,17 +31,22 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="container">
-    <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li class="active"><a ng-href=".">Refresh</a></li>
+<div class="navbar navbar-inverse navbar-static-top">
+
+    <div class="container">
+
+        <img src="images/Motorists_banner3.png" alt="Logo">
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ng-href=".">Refresh</a></li>
             <li><a ng-href="https://associates.motoristsgroup.com/mig/vc/SitePages/Home.aspx">Sharepoint Vision Community</a></li>
         </ul>
-        <h3 class="text-muted">Objective Resource Planning</h3>
+
     </div>
 </div>
 
 <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -66,10 +76,11 @@
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
+<!--<script src="bower_components/jquery/dist/jquery.js"></script>
+
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
 <!-- endbower -->
 <!-- endbuild -->
 

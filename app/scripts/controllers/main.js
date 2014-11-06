@@ -15,15 +15,15 @@ angular.module('angularWebApp')
         $scope.search = "";
         var masterObjectiveList = getObjectiveList();
         var currentSortSel = $scope.assocSort;
-        $scope.currentSelection=null;
-        var currentObjSel=null;
+        $scope.currentSelection= masterObjectiveList[0];
+        var currentObjSel=$scope.currentSelection;
         $scope.my_data = generateTreeList(masterObjectiveList);
         var masterAssociateList = getAssociateList();
         $scope.currentAssociateSelection=null;
         $scope.associate_data = createSortedTreeList(masterAssociateList, $scope.assocSort);
         var currentSelAssoc = null;
         $scope.cardHidden = "none";
-
+        $scope.dynCardStyle = "{"
         /*staging area stack of associates*/
         $scope.stagedAssociates = [];
         //stack.push(2);       // stack is now [2]
@@ -98,7 +98,17 @@ angular.module('angularWebApp')
                 currentSelAssoc.currLoad++;
             }
         };
+        $scope.chooseCardClass = function(count){
+            if(count <= 1) {
+                return "cardGreen";
+            }
+            if(count <= 2){
+                return "cardYellow";
+            }
+            return "cardRed";
+        }
     });
+
 function inArray(elem,array)
 {
     var len = array.length;
